@@ -67,26 +67,26 @@ export default function GreenHome({ lang = "en", onToggleLang }) {
                 <p>{copy.intro}</p>
 
                 <div className="project-page__images project-page__images--two">
-                    <img src={logoGreenHouse} alt="GreenHome Sustentable Logo" />
-                    <img className="logo" src={logoGreenHouse2} alt="Variación de logo GreenHome Sustentable" />
+                    <img src={logoGreenHouse} alt="GreenHome Sustentable Logo" loading="eager" decoding="async" fetchPriority="high" />
+                    <img className="logo" src={logoGreenHouse2} alt="Variación de logo GreenHome Sustentable" loading="eager" decoding="async" fetchPriority="high" />
                 </div>
 
                 <h3>{copy.brandTitle}</h3>
                 <p>{copy.brandText}</p>
 
                 <div className="project-page__images project-page__images--three">
-                    <img src={benefitImage} alt="Beneficios de GreenHome Sustentable" />
-                    <img src={installationImage} alt="Servicio de instalación GreenHome" />
-                    <img src={usImage} alt="Equipo de GreenHome Sustentable" />
+                    <img src={benefitImage} alt="Beneficios de GreenHome Sustentable" loading="lazy" decoding="async" fetchPriority="low" />
+                    <img src={installationImage} alt="Servicio de instalación GreenHome" loading="lazy" decoding="async" fetchPriority="low" />
+                    <img src={usImage} alt="Equipo de GreenHome Sustentable" loading="lazy" decoding="async" fetchPriority="low" />
                 </div>
 
                 <h3>{copy.visualsTitle}</h3>
                 <p>{copy.visualsText}</p>
 
                 <div className="project-page__images project-page__images--stack">
-                    <img src={pagina1} alt="Vista previa 1 del sitio GreenHome Sustentable" />
-                    <img src={pagina2} alt="Vista previa 2 del sitio GreenHome Sustentable" />
-                    <img src={pagina3} alt="Vista previa 3 del sitio GreenHome Sustentable" />
+                    <img src={pagina1} alt="Vista previa 1 del sitio GreenHome Sustentable" loading="lazy" decoding="async" fetchPriority="low" />
+                    <img src={pagina2} alt="Vista previa 2 del sitio GreenHome Sustentable" loading="lazy" decoding="async" fetchPriority="low" />
+                    <img src={pagina3} alt="Vista previa 3 del sitio GreenHome Sustentable" loading="lazy" decoding="async" fetchPriority="low" />
                 </div>
 
                 <ProjectGallery currentProject="greenhome" lang={lang} />

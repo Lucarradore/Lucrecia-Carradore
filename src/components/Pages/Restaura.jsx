@@ -67,25 +67,25 @@ export default function Restaura({ lang = "en", onToggleLang }) {
                         <p>{copy.intro}</p>
         
                         <div className="project-page__images project-page__images--two">
-                            <img src={logoRestaura} alt="Restaura Restaurant Logo" />
-                            <img className="logo" src={logoRestaura2} alt="Variación de logo Restaura Restaurant" />
+                            <img src={logoRestaura} alt="Restaura Restaurant Logo" loading="eager" decoding="async" fetchPriority="high" />
+                            <img className="logo" src={logoRestaura2} alt="Variación de logo Restaura Restaurant" loading="eager" decoding="async" fetchPriority="high" />
                         </div>
         
                         <h3>{copy.brandTitle}</h3>
                         <p>{copy.brandText}</p>
         
                         <div className="project-page__images project-page__images--three">
-                            <img src={image} alt="Beneficios de Restaura Restaurant" />
-                            <img src={image2} alt="Servicio de instalación Restaura Restaurant" />
-                            <img src={image3} alt="Equipo de Restaura Restaurant" />
+                            <img src={image} alt="Beneficios de Restaura Restaurant" loading="lazy" decoding="async" fetchPriority="low" />
+                            <img src={image2} alt="Servicio de instalación Restaura Restaurant" loading="lazy" decoding="async" fetchPriority="low" />
+                            <img src={image3} alt="Equipo de Restaura Restaurant" loading="lazy" decoding="async" fetchPriority="low" />
                         </div>
         
                         <h3>{copy.visualsTitle}</h3>
                         <p>{copy.visualsText}</p>
         
                         <div className="project-page__images project-page__images--stack">
-                            <img src={page} alt="Vista previa 1 del sitio Restaura Restaurant" />
-                            <img src={page2} alt="Vista previa 2 del sitio Restaura Restaurant" />
+                            <img src={page} alt="Vista previa 1 del sitio Restaura Restaurant" loading="lazy" decoding="async" fetchPriority="low" />
+                            <img src={page2} alt="Vista previa 2 del sitio Restaura Restaurant" loading="lazy" decoding="async" fetchPriority="low" />
                         </div>
         
                         <ProjectGallery currentProject="restaura" lang={lang} />

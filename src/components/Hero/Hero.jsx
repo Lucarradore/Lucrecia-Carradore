@@ -61,6 +61,8 @@ export default function Hero({ lang = "en" }) {
 				   <video
 					   className="hero__bg-video"
 					   src={scrollHintVideo}
+					   preload="auto"
+					   poster="/bg-sky.jfif"
 					   autoPlay
 					   loop
 					   muted

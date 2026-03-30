@@ -30,7 +30,13 @@ export default function Projects({ lang = "en" }) {
                     <Link to={project.route} className="home-card" key={project.slug}>
                         <div className="project-card">
                         <div className="home-card-img-wrapper">
-                            <img src={project.image} alt={lang === "es" ? (project.titleEs ?? project.title) : project.title} />
+                            <img
+                                src={project.image}
+                                alt={lang === "es" ? (project.titleEs ?? project.title) : project.title}
+                                loading="lazy"
+                                decoding="async"
+                                fetchPriority="low"
+                            />
                         </div>
                         <div className="content-card">
                             <div className="project-card-title">{lang === "es" ? (project.titleEs ?? project.title) : project.title}</div>

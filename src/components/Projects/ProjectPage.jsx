@@ -25,7 +25,7 @@ export default function ProjectPage() {
                     <div className="project-card" key={project.slug}>
 
                     <Link to={project.route} className="project-card">
-                        <img src={project.image} alt={project.slug} />
+                        <img src={project.image} alt={project.slug} loading="lazy" decoding="async" fetchPriority="low" />
                             <div className="project-card-title">{project.title}</div>
                             <div className="project-card-subtitle">{project.description}</div>
                     </Link>

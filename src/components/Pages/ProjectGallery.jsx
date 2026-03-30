@@ -25,7 +25,13 @@ export default function ProjectGallery({ currentProject, lang = "en" }) {
       <div className="card-galery__grid">
         {otherProjects.map((project) => (
           <Link key={project.slug} to={project.route} className="galery">
-            <img src={project.image} alt={lang === "es" ? (project.titleEs ?? project.title) : project.title} />
+            <img
+              src={project.image}
+              alt={lang === "es" ? (project.titleEs ?? project.title) : project.title}
+              loading="lazy"
+              decoding="async"
+              fetchPriority="low"
+            />
             <h5>{lang === "es" ? (project.titleEs ?? project.title) : project.title}</h5>
             <p>{lang === "es" ? (project.descriptionEs ?? project.description) : project.description}</p>
           </Link>

@@ -65,24 +65,24 @@ export default function Hotel({ lang = "en", onToggleLang }) {
                 <p>{copy.intro}</p>
 
                 <div className="project-page__images project-page__images--two">
-                    <img src={logoHotel} alt="Hotel Logo" />
-                    <img className="logo" src={logoHotel2} alt="Variación de logo Hotel" />
+                    <img src={logoHotel} alt="Hotel Logo" loading="eager" decoding="async" fetchPriority="high" />
+                    <img className="logo" src={logoHotel2} alt="Variación de logo Hotel" loading="eager" decoding="async" fetchPriority="high" />
                 </div>
 
                 <h3>{copy.brandTitle}</h3>
                 <p>{copy.brandText}</p>
 
                 <div className="project-page__images project-page__images--three">
-                    <img src={image2} alt="Servicio del Hotel" />
-                    <img src={image3} alt="Equipo del Hotel" />
-                    <img src={image1} alt="Beneficios del Hotel" />
+                    <img src={image2} alt="Servicio del Hotel" loading="lazy" decoding="async" fetchPriority="low" />
+                    <img src={image3} alt="Equipo del Hotel" loading="lazy" decoding="async" fetchPriority="low" />
+                    <img src={image1} alt="Beneficios del Hotel" loading="lazy" decoding="async" fetchPriority="low" />
                 </div>
 
                 <h3>{copy.visualsTitle}</h3>
                 <p>{copy.visualsText}</p>
 
                 <div className="project-page__images project-page__images--stack">
-                    <img src={pagina} alt="Vista previa del sitio Hotel" />
+                    <img src={pagina} alt="Vista previa del sitio Hotel" loading="lazy" decoding="async" fetchPriority="low" />
                 </div>
 
                 <ProjectGallery currentProject="hotel" lang={lang} />

@@ -27,7 +27,7 @@ export default function Footer({ lang = "en" }) {
                 </div>
                 <p>{copy.copyright}</p>
             </div>
-            <img src={Patente} alt="Decorative pattern" className="footer__pattern" aria-hidden="true" />
+                <img src={Patente} alt="Decorative pattern" className="footer__pattern" aria-hidden="true" loading="lazy" decoding="async" fetchPriority="low" />
         </footer>
     );
 }

@@ -64,23 +64,23 @@ export default function Noir({ lang = "en", onToggleLang }) {
                                 <p>{copy.intro}</p>
                 
                                 <div className="project-page__images project-page__images--two">
-                                    <img src={logoNoir} alt="Noir Shop Logo" />
-                                    <img className="logo" src={logoNoir2} alt="Variación de logo Noir Shop" />
+                                    <img src={logoNoir} alt="Noir Shop Logo" loading="eager" decoding="async" fetchPriority="high" />
+                                    <img className="logo" src={logoNoir2} alt="Variación de logo Noir Shop" loading="eager" decoding="async" fetchPriority="high" />
                                 </div>
                 
                                 <h3>{copy.brandTitle}</h3>
                                 <p>{copy.brandText}</p>
                 
                                 <div className="project-page__images project-page__images--three">
-                                    <img src={image} alt="Beneficios de Noir Shop" />
+                                    <img src={image} alt="Beneficios de Noir Shop" loading="lazy" decoding="async" fetchPriority="low" />
                                 </div>
                 
                                 <h3>{copy.visualsTitle}</h3>
                                 <p>{copy.visualsText}</p>
                 
                                 <div className="project-page__images project-page__images--stack">
-                                    <img src={noirpage} alt="Vista previa 1 del sitio GreenHome Sustentable" />
-                                    <img src={noirpage2} alt="Vista previa 2 del sitio GreenHome Sustentable" />
+                                    <img src={noirpage} alt="Vista previa 1 del sitio GreenHome Sustentable" loading="lazy" decoding="async" fetchPriority="low" />
+                                    <img src={noirpage2} alt="Vista previa 2 del sitio GreenHome Sustentable" loading="lazy" decoding="async" fetchPriority="low" />
                                 </div>
                 
                                 <ProjectGallery currentProject="noir" lang={lang} />
