@@ -1,0 +1,448 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Titillium+Web:wght@400&display=swap");
+
+.contact {
+	position: relative;
+	width: 100%;
+	min-height: auto;
+	height: auto;
+	overflow: visible;
+	background: #081a3a;
+	color: #ffffff;
+}
+
+.contact__content h2{
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: clamp(2.5rem, 5vw, 3rem);
+    letter-spacing: 0.08em;
+    text-align: center;
+	margin: 0 0 0.2rem 0;
+}
+
+.contact__content p{
+    font-family: 'Titillium Web', sans-serif;
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    font-weight: 300;
+    font-style: normal;
+    line-height: 1.6;
+	margin: 0;
+}
+
+.contact__content a:not(.button-chat) {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: clamp(1rem, 2.5vw, 30px);
+    font-weight: 700;
+    font-style: normal;
+    line-height: 1.6;
+    color: #ffffffd7;
+    text-decoration: none;
+    margin-top: 1rem;
+	position: relative;
+	display: inline-block;
+}
+
+.contact__content a:not(.button-chat)::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: auto;
+    bottom: 1em;
+    height: 0.3em;
+    width: 100%;
+    z-index: -1;
+    border-radius: 2px;
+    transition: width 0.25s ease, background 0.25s, background-size 0.25s, background-position 0.25s;
+    background-size: 90% 90%;
+    background-position: left bottom;
+}
+
+.contact__content a:not(.button-chat):hover,
+.contact__content li:hover a:not(.button-chat),
+.contact__content a:not(.button-chat):focus-visible {
+    background: linear-gradient(90deg, #66e9ff 0%, #ff47cf 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    transition: color 0.2s, background 0.2s;
+}
+
+.contact__content li {
+	list-style: none;
+	position: relative;
+}
+
+.contact__overlay{
+    position: absolute;
+	inset: 0;
+	pointer-events: none;
+	z-index: 1;
+}
+
+.contact__chat-button {
+	position: fixed;
+	right: 1rem;
+	bottom: 1rem;
+	z-index: 1200;
+	width: 56px;
+	height: 56px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	text-decoration: none;
+	color: #ffffff;
+	background: rgba(8, 26, 58, 0.9);
+	border: 1px solid rgba(122, 232, 255, 0.6);
+	box-shadow: 0 10px 22px rgba(0, 0, 0, 0.35);
+	transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact__chat-button:hover {
+	transform: translateY(-2px) scale(1.04);
+	background: rgba(15, 44, 96, 0.95);
+	box-shadow: 0 14px 24px rgba(0, 0, 0, 0.4);
+}
+
+.contact__chat-icon {
+	font-size: 1.2rem;
+}
+
+.contact__chat-tooltip {
+	position: absolute;
+	right: calc(100% + 0.7rem);
+	top: 50%;
+	transform: translateY(-50%);
+	white-space: nowrap;
+	padding: 0.4rem 0.65rem;
+	border-radius: 0.5rem;
+	font-family: 'Titillium Web', sans-serif;
+	font-size: 0.86rem;
+	line-height: 1;
+	color: #dff8ff;
+	background: rgba(8, 26, 58, 0.94);
+	border: 1px solid rgba(122, 232, 255, 0.45);
+	opacity: 1;
+	pointer-events: none;
+	transition: opacity 0.2s ease;
+}
+
+.contact__blob-modal {
+	position: fixed;
+	inset: 0;
+	z-index: 999;
+	background: rgba(3, 10, 25, 0.28);
+	backdrop-filter: blur(14px);
+	-webkit-backdrop-filter: blur(14px);
+	display: grid;
+	align-items: center;
+	justify-content: center;
+	padding: 1.25rem;
+}
+
+.contact__blob-stage {
+	position: relative;
+	width: min(94vw, 1450px);
+	height: min(90vh, 900px);
+	border-radius: 22px;
+	background: rgba(7, 18, 42, 0);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 1rem;
+}
+
+.contact__blob-animation {
+	width: 100%;
+	height: 100%;
+}
+
+.contact__blob-links {
+	position: absolute;
+	inset: 0;
+	z-index: 2;
+	display: grid;
+	grid-template-columns: repeat(2, minmax(170px, 230px));
+	gap: 1rem;
+	align-content: center;
+	justify-content: center;
+	padding: 2rem;
+	perspective: 1200px;
+	pointer-events: none;
+}
+
+.contact__blob-title {
+	grid-column: 1 / -1;
+	margin: 0 0 0.6rem;
+	text-align: center;
+	font-family: 'Bebas Neue', sans-serif;
+	letter-spacing: 0.05em;
+	font-size: clamp(1.05rem, 2vw, 1.5rem);
+	color: #dcf9ff;
+	text-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
+}
+
+.contact__blob-link {
+	display: block;
+	border-radius: 14px;
+	overflow: hidden;
+	box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	background: rgba(4, 14, 33, 0.52);
+	transform: rotateX(32deg);
+	transform-origin: top center;
+	transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+	pointer-events: auto;
+}
+
+.contact__blob-link--last {
+	grid-column: 1 / -1;
+	justify-self: center;
+	width: min(230px, 100%);
+}
+
+.contact__blob-link:hover {
+	transform: rotateX(24deg) translateY(-6px) scale(1.02);
+	box-shadow: 0 16px 28px rgba(0, 0, 0, 0.42);
+	border-color: rgba(102, 233, 255, 0.6);
+}
+
+.contact__blob-link img {
+	width: 100%;
+	height: 130px;
+	object-fit: cover;
+	display: block;
+}
+
+.contact__blob-close {
+	position: absolute;
+	top: 8px;
+	right: 10px;
+	z-index: 5;
+	width: 26px;
+	height: 26px;
+	border: none;
+	border-radius: 50%;
+	background: rgba(255, 255, 255, 0.16);
+	color: #fff;
+	font-size: 1.1rem;
+	line-height: 1;
+	cursor: pointer;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	transition: background 0.2s ease;
+}
+
+.contact__blob-close:hover {
+	background: rgba(255, 255, 255, 0.28);
+}
+
+@media (max-width: 760px) {
+	.contact__blob-links {
+		width: 82px;
+		height: 82px;
+		padding: 1.2rem;
+	}
+
+	.contact__blob-link--last {
+		width: min(160px, 100%);
+	}
+
+	.contact__blob-title {
+		font-size: 1rem;
+		margin-bottom: 0.35rem;
+	}
+
+	.contact__blob-link img {
+		height: 90px;
+	}
+}
+
+.contact__content {
+	position: relative;
+	z-index: 2;
+	min-height: 100%;
+	height: auto;
+    padding: 8rem 10rem 0;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+	gap: 0;
+}
+
+
+
+.services{
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 2.5rem;
+	margin-bottom: 4rem;
+	gap: 2rem;
+	z-index: 0;
+
+}
+
+.service{
+	z-index: 0;
+	flex: 1 1 300px;
+	padding: 2rem 3rem;
+	background-color: #030f25;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-radius: 0;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+	gap: 3rem;
+
+}
+
+.service h3{
+	font-weight: 700;
+	font-style: normal;
+	font-size: clamp(1.5rem, 3vw, 2rem);
+	letter-spacing: 0.08em;
+	margin: 0 0 1rem 0;
+}
+
+.service p{
+	font-weight: 300;
+	font-style: normal;
+	font-size: clamp(1rem, 2vw, 1.3rem);
+	line-height: 1.6;
+	margin: 0;
+}
+
+.button-chat{
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 1.2rem;
+	padding: 0.6rem 1.5rem;
+	border-radius: 0;
+	font-size: 14px;
+	background-color: #66e9ff;
+	color: #000;
+	font-weight: 600;
+	border: none;
+	text-decoration: none;
+	font-family: 'Titillium Web', sans-serif;
+	line-height: 1.2;
+	transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.button-chat:hover {
+	background-color: #4ac8e0;
+	transform: translateY(-2px);
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 900px) {
+	.contact__content {
+		padding: 6.5rem 1rem 2rem;
+		align-items: center;
+		text-align: center;
+	}
+
+	.contact__content h2,
+	.contact__content > p {
+		width: min(92vw, 560px);
+	}
+
+	.services {
+		width: 100%;
+		justify-content: center;
+	}
+
+	.service {
+		flex: 0 1 min(92vw, 560px);
+		width: min(92vw, 560px);
+		padding: 1.5rem 1.2rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+
+	.service p,
+	.service h3 {
+		text-align: center;
+	}
+}
+
+@media (min-width: 901px) and (max-width: 1024px) {
+	.contact__content {
+		padding: 5.8rem 3rem 1.6rem;
+		align-items: center;
+		text-align: center;
+	}
+
+	.contact__content h2,
+	.contact__content > p {
+		width: min(88vw, 760px);
+		text-align: center;
+	}
+
+	.services {
+		justify-content: center;
+		margin-top: 2rem;
+		margin-bottom: 4rem;
+	}
+
+	.contact__chat-button {
+		width: 68px;
+		height: 68px;
+		right: 1.2rem;
+		bottom: 1.2rem;
+	}
+
+	.contact__chat-icon {
+		font-size: 1.45rem;
+	}
+}
+
+@media (width: 1024px) {
+	.contact {
+		min-height: auto;
+	}
+
+	.contact__content {
+		padding-top: 4.9rem;
+		padding-bottom: 3rem;
+	}
+
+	.services {
+		margin-top: 1.5rem;
+		margin-bottom: 4rem;
+	}
+}
+
+@media (max-width: 911px) {
+	.contact {
+		min-height: auto;
+	}
+
+	.contact__content {
+		padding-top: 7.8rem;
+		padding-bottom: 0;
+	}
+
+	.services {
+		margin-bottom: 4rem;
+	}
+}
+
+@media (max-width: 430px) {
+	.contact__chat-button {
+		width: 72px;
+		height: 72px;
+		right: 0.9rem;
+		bottom: 0.9rem;
+	}
+
+	.contact__chat-icon {
+		font-size: 1.75rem;
+	}
+}
+

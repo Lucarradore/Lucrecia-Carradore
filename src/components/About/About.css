@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Titillium+Web:wght@400&display=swap");
+
+
+.about__content {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 4rem;
+}
+
+.about__content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* Prueba con 'crisp-edges' o 'high-quality' si el navegador lo soporta */
+
+  /* Si la imagen sigue pixelada, prueba con: */
+  
+  /* Esto puede dejar bordes vacíos pero no estira la imagen */
+
+  /* Bancos de imágenes en alta resolución recomendados: */
+  /* - unsplash.com */
+  /* - pexels.com */
+  /* - pixabay.com */
+  /* Busca imágenes de al menos 2560x1440px o 3840x2160px para máxima calidad */
+  filter: brightness(0.65);
+  background-color: #081a3a;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.about__info, .about__content img {
+  position: relative;
+  z-index: 1;
+}
+
+.about__content img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    position: relative; 
+    top: 0;
+    left: 30rem;
+    z-index: 2;
+}
+
+.about__info{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    margin: 10rem 0 10rem 0;
+}
+
+.about__content h2 {
+    color: #ffffff;
+    font-family: "Playfair Display", serif;
+font-style: italic;
+  font-weight: 300;
+    margin: 0;
+    text-align: left;
+    font-size: clamp(3rem, 6vw, 4rem);
+    letter-spacing: 0.08em;
+    margin:0 20rem;
+    gap: 1rem;
+}
+
+.about__p{
+    margin: 2rem 20rem;
+    justify-self: end;
+    text-align: left;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    font-weight: 300;
+    font-style: normal;
+    line-height: 1.6;
+    width: min(100%, 750px);
+    color: #ffffffd7;
+}
+
+.wave,
+.wave-button {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.wave {
+  top: 0;
+  z-index: 1;
+}
+
+.wave-button {
+  bottom: -1px;
+  transform: rotate(180deg);
+}
+
+.wave svg,
+.wave-button svg {
+  display: block;
+  width: 100%;
+  height: 103px;
+}
+
+@media (max-width: 980px) {
+	.about__content {
+    padding: 6rem 2rem 2.5rem;
+		grid-template-columns: 1fr;
+		row-gap: 1.25rem;
+	}
+
+  .about__info {
+    width: min(84vw, 540px);
+    margin: 6rem auto;
+  }
+
+  .about__content h2 {
+    margin: 0;
+    width: 100%;
+  }
+
+	.about__p {
+		justify-self: start;
+		width: 100%;
+    margin: 1.25rem 0 0;
+	}
+}
+
+@media (min-width: 901px) and (max-width: 1024px) {
+  .about__content {
+    gap: 2rem;
+    padding: 5rem 2rem 2rem;
+  }
+
+  .about__info {
+    width: min(86vw, 780px);
+    margin: 4.5rem auto 4rem;
+    align-items: center;
+  }
+
+  .about__content h2 {
+    margin: 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  .about__p {
+    margin: 1.25rem 0 0;
+    text-align: center;
+    width: min(100%, 760px);
+  }
+}

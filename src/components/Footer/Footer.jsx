@@ -1,0 +1,32 @@
+import Patente from "../../assets/images/patente.png";
+import "./Footer.css";
+
+const copyByLang = {
+	en: {
+		links: ["Messenger", "LinkedIn", "Instagram", "GitHub"],
+		copyright: "© 2025 Lucrecia Carradore. All rights reserved.",
+	},
+	es: {
+		links: ["Messenger", "LinkedIn", "Instagram", "GitHub"],
+		copyright: "© 2025 Lucrecia Carradore. Todos los derechos reservados.",
+	},
+};
+
+export default function Footer({ lang = "en" }) {
+	const copy = copyByLang[lang] ?? copyByLang.en;
+
+    return (
+        <footer className="footer">
+            <div className="footer__content">
+                <div className="footer-links">
+                    <a href="#home">{copy.links[0]}</a>
+                    <a href="#about">{copy.links[1]}</a>
+                    <a href="#expertise">{copy.links[2]}</a>
+                    <a href="#expertise">{copy.links[3]}</a>
+                </div>
+                <p>{copy.copyright}</p>
+            </div>
+            <img src={Patente} alt="Decorative pattern" className="footer__pattern" aria-hidden="true" />
+        </footer>
+    );
+}

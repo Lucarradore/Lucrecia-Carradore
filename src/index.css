@@ -1,0 +1,82 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  background: #000b1e;
+}
+
+.app > section {
+  scroll-margin-top: 110px;
+}
+
+.app > section + section {
+  margin-top: clamp(2rem, 4vw, 4rem);
+}
+
+.app > footer {
+  margin-top: clamp(2rem, 3.5vw, 3rem);
+}
+
+@media (max-width: 1024px) {
+  .app > section {
+    scroll-margin-top: 92px;
+  }
+
+  .app > section + section {
+    margin-top: clamp(1.5rem, 5vw, 2.75rem);
+  }
+
+  .app > footer {
+    margin-top: clamp(1.25rem, 4vw, 2rem);
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1024px) {
+  .app > section + section {
+    margin-top: 1.25rem;
+  }
+
+  .app > #projects,
+  .app > #about {
+    margin-top: 0.75rem;
+  }
+
+  .app > footer {
+    margin-top: 0.5rem;
+  }
+}
+
+.app > #contact {
+  margin-top: 0;
+}
+
+.app > footer {
+  margin-top: 0;
+}
