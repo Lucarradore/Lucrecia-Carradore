@@ -2,13 +2,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate, Link } from "react-router-dom";
-import GreenHouse from "../../assets/images/GreenHouse/GreenHome-Sustentable.png";
-import Hotel from "../../assets/images/Hotel/Hotel-Famous.png";
-import Noir from "../../assets/images/Noir/Noir-Shop.png";
-import Restaura from "../../assets/images/RestauraRestaurant/Restaura-Restaurant.png";
-import MusicStore from "../../assets/images/Music Store/Music-store.png";
-import Portfolio from "../../assets/images/Portfolio/Portfolio.png";
-import Pizzeria from "../../assets/images/Pizzeria/Louggie-Pizzería.png";
 import "./Projects.css";
 import portfolioProjects from "../Pages/portfolioProjects";
 

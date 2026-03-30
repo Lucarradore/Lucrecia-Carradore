@@ -1,14 +1,15 @@
 import { Link } from "react-router-dom";
 import ProjectGallery from "./ProjectGallery";
-import logoRestaura from "../../assets/images/RestauraRestaurant/RestauraLogo.png";
-import logoRestaura2 from "../../assets/images/RestauraRestaurant/RestauraLogo2.png";
-import image from "../../assets/images/RestauraRestaurant/restaura-image.jpeg";
-import image2 from "../../assets/images/RestauraRestaurant/restaura-image2.jpeg";
-import image3 from "../../assets/images/RestauraRestaurant/restaura-image3.jpeg";
-import page from "../../assets/images/RestauraRestaurant/pagina-restaura1.png";
-import page2 from "../../assets/images/RestauraRestaurant/pagina-restaura2.png";
 
 import "./Pages.css";
+
+const logoRestaura = "/images/RestauraRestaurant/RestauraLogo.png";
+const logoRestaura2 = "/images/RestauraRestaurant/RestauraLogo2.png";
+const image = "/images/RestauraRestaurant/restaura-image.jpeg";
+const image2 = "/images/RestauraRestaurant/restaura-image2.jpeg";
+const image3 = "/images/RestauraRestaurant/restaura-image3.jpeg";
+const page = "/images/RestauraRestaurant/pagina-restaura1.png";
+const page2 = "/images/RestauraRestaurant/pagina-restaura2.png";
 
 const copyByLang = {
     en: {

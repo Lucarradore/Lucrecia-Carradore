@@ -1,8 +1,8 @@
+import { useEffect, useState } from "react";
 import Lottie from "lottie-react";
-import scrollDownHintAnimation from "../../assets/animation/Scroll down hint.json";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebookMessenger, faLinkedin, faInstagram, faGithub } from "@fortawesome/free-brands-svg-icons";
-import scrollHintVideo from "../../assets/video/videohero.mp4";
+import scrollHintVideo from "/video/videohero.mp4";
 
 
 import "./Hero.css";
@@ -21,7 +21,29 @@ const copyByLang = {
 };
 
 export default function Hero({ lang = "en" }) {
+	const [scrollDownHintAnimation, setScrollDownHintAnimation] = useState(null);
 	const copy = copyByLang[lang] ?? copyByLang.en;
+
+	useEffect(() => {
+		let isMounted = true;
+
+		fetch("/animation/Scroll down hint.json")
+			.then((response) => response.json())
+			.then((data) => {
+				if (isMounted) {
+					setScrollDownHintAnimation(data);
+				}
+			})
+			.catch(() => {
+				if (isMounted) {
+					setScrollDownHintAnimation(null);
+				}
+			});
+
+		return () => {
+			isMounted = false;
+		};
+	}, []);
 
 	const handleScrollToExpertise = () => {
 		const expertiseSection = document.querySelector("#expertise");
@@ -73,11 +95,15 @@ export default function Hero({ lang = "en" }) {
 					   padding: 0
 				   }}
 			   >
-				   <Lottie
-					   className="hero__scroll-hint-lottie"
-					   animationData={scrollDownHintAnimation}
-					   loop={true}
-				   />
+				   {scrollDownHintAnimation ? (
+					   <Lottie
+						   className="hero__scroll-hint-lottie"
+						   animationData={scrollDownHintAnimation}
+						   loop={true}
+					   />
+				   ) : (
+					   <span className="hero__scroll-hint-fallback" aria-hidden="true">↓</span>
+				   )}
 			   </button>
 		   </section>
 	);

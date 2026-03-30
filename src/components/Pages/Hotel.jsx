@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom";
 import ProjectGallery from "./ProjectGallery";
-import logoHotel from "../../assets/images/Hotel/logo-hotel.png";
-import logoHotel2 from "../../assets/images/Hotel/logo-hotel2.png";
-import image1 from "../../assets/images/Hotel/imagen-hotel1.jpg";
-import image2 from "../../assets/images/Hotel/image-hotel2.jpg";
-import image3 from "../../assets/images/Hotel/image-hotel3.jpg";
-import pagina from "../../assets/images/Hotel/pagina-hotel.png";
 import "./Pages.css";
+
+const logoHotel = "/images/Hotel/logo-hotel.png";
+const logoHotel2 = "/images/Hotel/logo-hotel2.png";
+const image1 = "/images/Hotel/imagen-hotel1.jpg";
+const image2 = "/images/Hotel/image-hotel2.jpg";
+const image3 = "/images/Hotel/image-hotel3.jpg";
+const pagina = "/images/Hotel/pagina-hotel.png";
 
 const copyByLang = {
     en: {

@@ -1,14 +1,15 @@
 import { Link } from "react-router-dom";
 import ProjectGallery from "./ProjectGallery";
 import "./Pages.css";
-import logoGreenHouse from "../../assets/images/GreenHouse/logoGreenHouse.png";
-import logoGreenHouse2 from "../../assets/images/GreenHouse/logoGreen.png";
-import benefitImage from "../../assets/images/GreenHouse/benefit4.jpg";
-import installationImage from "../../assets/images/GreenHouse/service-installation.jpg";
-import usImage from "../../assets/images/GreenHouse/us3.jpg";
-import pagina1 from "../../assets/images/GreenHouse/Pagina1.png";
-import pagina2 from "../../assets/images/GreenHouse/Pagina2.png";
-import pagina3 from "../../assets/images/GreenHouse/Pagina3.png";
+
+const logoGreenHouse = "/images/GreenHouse/logoGreenHouse.png";
+const logoGreenHouse2 = "/images/GreenHouse/logoGreen.png";
+const benefitImage = "/images/GreenHouse/benefit4.jpg";
+const installationImage = "/images/GreenHouse/service-installation.jpg";
+const usImage = "/images/GreenHouse/us3.jpg";
+const pagina1 = "/images/GreenHouse/Pagina1.png";
+const pagina2 = "/images/GreenHouse/Pagina2.png";
+const pagina3 = "/images/GreenHouse/Pagina3.png";
 
 const copyByLang = {
     en: {

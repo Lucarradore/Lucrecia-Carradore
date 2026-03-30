@@ -104,31 +104,31 @@ export default function Expertise({ lang = "en" }) {
 
             <div className="html-code-wrap">
            <div class="html-code" aria-label="Código HTML simulado">
-  <span class="line"><span class="sym">&lt;</span><span class="name">!DOCTYPE</span><span class="green"> html</span><span class="sym">&gt;</span></span>
+                <span class="line"><span class="sym">&lt;</span><span class="name">!DOCTYPE</span><span class="green"> html</span><span class="sym">&gt;</span></span>
 
-    <span class="line"><span class="sym">&lt;</span><span class="name">html</span><span class="green"> lang</span><span class="white">=</span><span class="yellow">{`"${copy.htmlLang}"`}</span><span class="sym">&gt;</span></span>
+                <span class="line"><span class="sym">&lt;</span><span class="name">html</span><span class="green"> lang</span><span class="white">=</span><span class="yellow">{`"${copy.htmlLang}"`}</span><span class="sym">&gt;</span></span>
 
-  <span class="line i1"><span class="sym">&lt;</span><span class="name">head</span><span class="sym">&gt;</span></span>
-  <span class="line i2"><span class="sym">&lt;</span><span class="name">title</span><span class="sym">&gt;</span></span>
-  <span class="line i3 text">Full Stack Developer</span>
-  <span class="line i2"><span class="sym">&lt;</span><span class="slash">/</span><span class="name">title</span><span class="sym">&gt;</span></span>
-  <span class="line i1"><span class="sym">&lt;</span><span class="slash">/</span><span class="name">head</span><span class="sym">&gt;</span></span>
+                <span class="line i1"><span class="sym">&lt;</span><span class="name">head</span><span class="sym">&gt;</span></span>
+                <span class="line i2"><span class="sym">&lt;</span><span class="name">title</span><span class="sym">&gt;</span></span>
+                <span class="line i3 text">Full Stack Developer</span>
+                <span class="line i2"><span class="sym">&lt;</span><span class="slash">/</span><span class="name">title</span><span class="sym">&gt;</span></span>
+                <span class="line i1"><span class="sym">&lt;</span><span class="slash">/</span><span class="name">head</span><span class="sym">&gt;</span></span>
 
-  <span class="line i1"><span class="sym">&lt;</span><span class="name">body</span><span class="sym">&gt;</span></span>
-  <span class="line i2"><span class="sym">&lt;</span><span class="name">h1</span><span class="sym">&gt;</span></span>
-    <span class="line i3 text">{copy.helpText}</span>
-  <span class="line i2"><span class="sym">&lt;</span><span class="slash">/</span><span class="name">h1</span><span class="sym">&gt;</span></span>
+                <span class="line i1"><span class="sym">&lt;</span><span class="name">body</span><span class="sym">&gt;</span></span>
+                <span class="line i2"><span class="sym">&lt;</span><span class="name">h1</span><span class="sym">&gt;</span></span>
+                    <span class="line i3 text">{copy.helpText}</span>
+                <span class="line i2"><span class="sym">&lt;</span><span class="slash">/</span><span class="name">h1</span><span class="sym">&gt;</span></span>
 
-  <span class="line i2"><span class="sym">&lt;</span><span class="name">p</span><span class="sym">&gt;</span></span>
-  <span class="line i3 text">This is a dummy text whit</span>
-  <span class="line i3"><span class="sym">&lt;</span><span class="name">span</span><span class="sym">&gt;</span></span>
-  <span class="line i3 text">some span</span>
-  <span class="line i3"><span class="sym">&lt;</span><span class="slash">/</span><span class="name">span</span><span class="sym">&gt;</span></span>
-  <span class="line i3 text">Opps, I almost forget to say ¡Hello World!</span>
-  <span class="line i2"><span class="sym">&lt;</span><span class="slash">/</span><span class="name">p</span><span class="sym">&gt;</span></span>
-  <span class="line i1"><span class="sym">&lt;</span><span class="slash">/</span><span class="name">body</span><span class="sym">&gt;</span></span>
+                <span class="line i2"><span class="sym">&lt;</span><span class="name">p</span><span class="sym">&gt;</span></span>
+                <span class="line i3 text">This is a dummy text whit</span>
+                <span class="line i3"><span class="sym">&lt;</span><span class="name">span</span><span class="sym">&gt;</span></span>
+                <span class="line i3 text">some span</span>
+                <span class="line i3"><span class="sym">&lt;</span><span class="slash">/</span><span class="name">span</span><span class="sym">&gt;</span></span>
+                <span class="line i3 text">Opps, I almost forget to say ¡Hello World!</span>
+                <span class="line i2"><span class="sym">&lt;</span><span class="slash">/</span><span class="name">p</span><span class="sym">&gt;</span></span>
+                <span class="line i1"><span class="sym">&lt;</span><span class="slash">/</span><span class="name">body</span><span class="sym">&gt;</span></span>
 
-  <span class="line"><span class="sym">&lt;</span><span class="slash">/</span><span class="name">html</span><span class="sym">&gt;</span></span>
+                <span class="line"><span class="sym">&lt;</span><span class="slash">/</span><span class="name">html</span><span class="sym">&gt;</span></span>
 </div>
 </div>
 

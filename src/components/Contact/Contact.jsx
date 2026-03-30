@@ -26,7 +26,7 @@ const copyByLang = {
                     "Building robust and user-friendly e-commerce platforms that enable businesses to sell their products and services online, providing a seamless shopping experience for customers.",
             },
         ],
-        cta: "Get your quote",
+        cta: "Get your price",
     },
     es: {
         chatLabel: "¡Hola! Chateá conmigo",
@@ -99,13 +99,6 @@ export default function Contact({ lang = "en" }) {
                         <a className="button-chat" href={whatsappUrl} target="_blank" rel="noopener noreferrer">{copy.cta}</a>
                     </div>
                 </div>
-                {/*<ul>
-                    <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=lucreciacarradore@gmail.com" target="_blank" rel="noopener noreferrer">LUCRECIACARRADORE@GMAIL.COM</a></li>
-                    <li><a href="https://m.me/lucreciacarradore" target="_blank" rel="noopener noreferrer">MESSENGER</a></li>
-                    <li><a href="https://www.linkedin.com/in/lucreciacarradore" target="_blank" rel="noopener noreferrer">LINKEDIN</a></li>
-                    <li><a href="https://www.instagram.com/lu.carradore" target="_blank" rel="noopener noreferrer">INSTAGRAM</a></li>
-                    <li><a href="https://github.com/lucarradore" target="_blank" rel="noopener noreferrer">GITHUB</a></li>
-                </ul>*/}
             </div>
 
         </section>

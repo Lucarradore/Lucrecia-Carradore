@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
 import ProjectGallery from "./ProjectGallery";
-import logoNoir from "../../assets/images/Noir/logo-noir.png";
-import logoNoir2 from "../../assets/images/Noir/logo-noir2.png";
-import image from "../../assets/images/Noir/image-noir1.png";
-import noirpage from "../../assets/images/Noir/noirpage1.png";
-import noirpage2 from "../../assets/images/Noir/noirpage2.png";
 import "./Pages.css";
+
+const logoNoir = "/images/Noir/logo-noir.png";
+const logoNoir2 = "/images/Noir/logo-noir2.png";
+const image = "/images/Noir/image-noir1.png";
+const noirpage = "/images/Noir/noirpage1.png";
+const noirpage2 = "/images/Noir/noirpage2.png";
 
 const copyByLang = {
     en: {

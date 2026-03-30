@@ -1,5 +1,6 @@
-import Patente from "../../assets/images/patente.png";
 import "./Footer.css";
+
+const Patente = "/patente.png";
 
 const copyByLang = {
 	en: {
