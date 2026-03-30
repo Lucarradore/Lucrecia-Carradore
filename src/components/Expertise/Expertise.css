@@ -212,7 +212,7 @@
     margin: -2rem 30rem 0;
     width: 60%;
     height: clamp(50px, 40vh, 300px);
-    background-image: url("../../assets/images/bg.png");
+    background-image: url("/bg-sky.jfif");
     background-size: cover;
     background-position: center;
 }
