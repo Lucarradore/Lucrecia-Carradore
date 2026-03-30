@@ -13,6 +13,13 @@ const copyByLang = {
 	},
 };
 
+const socialLinks = {
+    messenger: "https://wa.me/3825448804",
+    linkedin: "https://www.linkedin.com/in/lucrecia-carradore-4b053022b/",
+    instagram: "#",
+    github: "https://github.com/Lucarradore",
+};
+
 export default function Footer({ lang = "en" }) {
 	const copy = copyByLang[lang] ?? copyByLang.en;
 
@@ -20,10 +27,10 @@ export default function Footer({ lang = "en" }) {
         <footer className="footer">
             <div className="footer__content">
                 <div className="footer-links">
-                    <a href="#home">{copy.links[0]}</a>
-                    <a href="#about">{copy.links[1]}</a>
-                    <a href="#expertise">{copy.links[2]}</a>
-                    <a href="#expertise">{copy.links[3]}</a>
+                    <a href={socialLinks.messenger} target="_blank" rel="noopener noreferrer">{copy.links[0]}</a>
+                    <a href={socialLinks.linkedin} target="_blank" rel="noopener noreferrer">{copy.links[1]}</a>
+                    <a href={socialLinks.instagram} target="_blank" rel="noopener noreferrer">{copy.links[2]}</a>
+                    <a href={socialLinks.github} target="_blank" rel="noopener noreferrer">{copy.links[3]}</a>
                 </div>
                 <p>{copy.copyright}</p>
             </div>

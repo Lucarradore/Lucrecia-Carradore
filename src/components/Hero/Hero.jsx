@@ -20,6 +20,12 @@ const copyByLang = {
 	},
 };
 
+const socialLinks = {
+	messenger: "https://wa.me/3825448804",
+	linkedin: "https://www.linkedin.com/in/lucrecia-carradore-4b053022b/",
+	github: "https://github.com/Lucarradore",
+};
+
 export default function Hero({ lang = "en" }) {
 	const [scrollDownHintAnimation, setScrollDownHintAnimation] = useState(null);
 	const copy = copyByLang[lang] ?? copyByLang.en;
@@ -69,10 +75,16 @@ export default function Hero({ lang = "en" }) {
 				   />
 			   </div>
 			   <div className="social-hero">
-				   <FontAwesomeIcon icon={faFacebookMessenger} />
-				   <FontAwesomeIcon icon={faLinkedin} />
+				   <a href={socialLinks.messenger} target="_blank" rel="noopener noreferrer" aria-label="Messenger">
+					   <FontAwesomeIcon icon={faFacebookMessenger} />
+				   </a>
+				   <a href={socialLinks.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+					   <FontAwesomeIcon icon={faLinkedin} />
+				   </a>
 				   <FontAwesomeIcon icon={faInstagram} />
-				   <FontAwesomeIcon icon={faGithub} />
+				   <a href={socialLinks.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+					   <FontAwesomeIcon icon={faGithub} />
+				   </a>
 			   </div>
 			   <div className="hero__content">
 				   <h1>LUCRECIA CARRADORE</h1>
