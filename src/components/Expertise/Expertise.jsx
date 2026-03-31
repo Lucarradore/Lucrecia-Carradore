@@ -25,6 +25,12 @@ const copyByLang = {
         ],
         htmlLang: "en",
         helpText: "How can I help you?",
+        htmlCode: {
+            titleText: "Full Stack Developer",
+            paragraphLine1: "This is a dummy text with",
+            spanText: "some span",
+            paragraphLine2: "Oops, I almost forgot to say Hello World!",
+        },
     },
     es: {
         title: "Experiencia",
@@ -47,6 +53,12 @@ const copyByLang = {
         ],
         htmlLang: "es",
         helpText: "¿Cómo puedo ayudarte?",
+        htmlCode: {
+            titleText: "Desarrolladora Full Stack",
+            paragraphLine1: "Este es un texto de ejemplo con",
+            spanText: "un span",
+            paragraphLine2: "Ups, casi me olvido de decir ¡Hola Mundo!",
+        },
     },
 };
 
@@ -110,7 +122,7 @@ export default function Expertise({ lang = "en" }) {
 
                 <span class="line i1"><span class="sym">&lt;</span><span class="name">head</span><span class="sym">&gt;</span></span>
                 <span class="line i2"><span class="sym">&lt;</span><span class="name">title</span><span class="sym">&gt;</span></span>
-                <span class="line i3 text">Full Stack Developer</span>
+                <span class="line i3 text">{copy.htmlCode.titleText}</span>
                 <span class="line i2"><span class="sym">&lt;</span><span class="slash">/</span><span class="name">title</span><span class="sym">&gt;</span></span>
                 <span class="line i1"><span class="sym">&lt;</span><span class="slash">/</span><span class="name">head</span><span class="sym">&gt;</span></span>
 
@@ -120,11 +132,11 @@ export default function Expertise({ lang = "en" }) {
                 <span class="line i2"><span class="sym">&lt;</span><span class="slash">/</span><span class="name">h1</span><span class="sym">&gt;</span></span>
 
                 <span class="line i2"><span class="sym">&lt;</span><span class="name">p</span><span class="sym">&gt;</span></span>
-                <span class="line i3 text">This is a dummy text whit</span>
+                <span class="line i3 text">{copy.htmlCode.paragraphLine1}</span>
                 <span class="line i3"><span class="sym">&lt;</span><span class="name">span</span><span class="sym">&gt;</span></span>
-                <span class="line i3 text">some span</span>
+                <span class="line i3 text">{copy.htmlCode.spanText}</span>
                 <span class="line i3"><span class="sym">&lt;</span><span class="slash">/</span><span class="name">span</span><span class="sym">&gt;</span></span>
-                <span class="line i3 text">Opps, I almost forget to say ¡Hello World!</span>
+                <span class="line i3 text">{copy.htmlCode.paragraphLine2}</span>
                 <span class="line i2"><span class="sym">&lt;</span><span class="slash">/</span><span class="name">p</span><span class="sym">&gt;</span></span>
                 <span class="line i1"><span class="sym">&lt;</span><span class="slash">/</span><span class="name">body</span><span class="sym">&gt;</span></span>
 
