@@ -4,19 +4,23 @@ const copyByLang = {
   en: {
     title: "Hey there!",
     paragraphs: [
-      "I’m a frontend engineer with a specialty in web accessibility, focused on building pixel-perfect, intuitive user interfaces. I enjoy working at the intersection of design and engineering, where great user experience meets robust, clean, and scalable code.",
-      "Currently, I'm a senior frontend engineer at Klaviyo, where I work on the component library team to help maintain and evolve our design system. In this role, I lead accessibility efforts across components, tooling, and patterns, partnering closely with designers and engineers to ensure accessibility is part of our core architecture.",
-      "Previously, I’ve worked across a wide range of environments, from product studios to startups and large tech companies, including Apple, Starry Internet, and Upstatement. Alongside my professional work, I also created an online video course a few years ago which walks through building a real-world, API-driven application from scratch. These experiences have shaped how I think about building products that are both well-crafted and widely usable.",
-      "Outside of work, you can usually find me climbing, playing tennis, hanging out with my wife and two cats, or running around Hyrule searching for Korok seeds Korok",
+      "I'm Lucrecia",
+      "I'm a Full Stack Web Developer with a strong focus on both frontend and backend development. I'm passionate about building digital experiences that are not only functional but also visually appealing and well-structured.",
+      "I began my journey in web development in 2021, studying at NUCBA, where I built a solid foundation in modern web technologies. I graduated in 2024 and I'm currently continuing my education at the National University of Chilecito (UNdeC), pursuing a degree in Web Application Development.",  
+      "Throughout my learning process, I’ve worked on collaborative projects alongside developers and designers. In these projects, I contributed to layout development, interface structuring, and pre-development wireframing. These experiences helped me strengthen essential skills such as teamwork, communication, and project planning from the ground up.",
+      "I specialize in technologies like HTML, CSS, JavaScript, and React, applying best practices, responsive design, and modern frontend tools. I also have backend knowledge, which allows me to approach projects with a comprehensive and well-rounded perspective.",
+      "Currently, I’m focusing my career on freelance work, aiming to continue growing professionally, take on new challenges, and help businesses and entrepreneurs bring their ideas to life in the digital world.",
     ],
   },
   es: {
     title: "¡Hola!",
     paragraphs: [
-      "Soy desarrolladora frontend, especializada en accesibilidad web y enfocada en crear interfaces intuitivas y cuidadas al detalle. Disfruto trabajar en la intersección entre diseño e ingeniería, donde una gran experiencia de usuario se combina con código limpio, robusto y escalable.",
-      "Actualmente soy senior frontend engineer en Klaviyo, dentro del equipo de librería de componentes, ayudando a mantener y evolucionar nuestro sistema de diseño. En este rol lidero iniciativas de accesibilidad en componentes, tooling y patrones, trabajando muy de cerca con diseñadores e ingenieros.",
-      "Antes trabajé en distintos entornos, desde estudios de producto hasta startups y grandes empresas tecnológicas, incluyendo Apple, Starry Internet y Upstatement. También creé un curso online donde muestro cómo construir desde cero una aplicación real impulsada por APIs. Todo eso moldeó mi forma de crear productos bien hechos y realmente usables.",
-      "Fuera del trabajo, me vas a encontrar escalando, jugando al tenis, compartiendo tiempo con mi esposa y mis dos gatos, o recorriendo Hyrule en busca de semillas Korok.",
+      "Soy Lucrecia",
+      "Soy desarrolladora web Full Stack, con enfoque tanto en frontend como en backend. Me apasiona crear experiencias digitales funcionales, atractivas y bien estructuradas, cuidando tanto la lógica como el diseño.",
+      "Inicié mi camino en el desarrollo web en 2021, formándome en NUCBA, donde adquirí bases sólidas en tecnologías modernas. En 2024 finalicé esa etapa y actualmente continúo ampliando mis conocimientos en la Universidad Nacional de Chilecito (UNdeC), cursando la carrera de Desarrollo de Aplicaciones Web (TUDAW).",
+      "A lo largo de mi formación, he participado en distintos proyectos colaborativos junto a desarrolladores y diseñadores, donde trabajé en la maquetación, organización de interfaces y creación de bocetos previos al desarrollo. Estas experiencias me permitieron fortalecer habilidades clave como el trabajo en equipo, la comunicación y la planificación de productos digitales desde cero.",
+      "Me especializo en tecnologías como HTML, CSS, JavaScript y React, aplicando buenas prácticas, diseño responsive y herramientas modernas del ecosistema frontend. También cuento con conocimientos en lógica de programación y desarrollo backend, lo que me permite tener una visión integral de cada proyecto.",
+      "Actualmente, estoy enfocando mi carrera hacia el trabajo freelance, con el objetivo de seguir creciendo profesionalmente, enfrentar nuevos desafíos y ayudar a emprendedores y empresas a llevar sus ideas al mundo digital.",
     ],
   },
 };
