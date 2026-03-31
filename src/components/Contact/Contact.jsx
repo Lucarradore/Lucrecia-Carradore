@@ -1,4 +1,8 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMessage } from "@fortawesome/free-solid-svg-icons";
 import "./Contact.css";
+
+const whatsappUrl = "https://wa.me/3825448804";
 
 
 
@@ -58,7 +62,17 @@ export default function Contact({ lang = "en" }) {
         <section className="contact" id="contact">
             <div className="contact__overlay" aria-hidden="true" />
 
-
+            <a
+                className="contact__chat-button"
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={copy.chatLabel}
+                title={copy.chatLabel}
+            >
+                <FontAwesomeIcon icon={faMessage} className="contact__chat-icon" aria-hidden="true" />
+                <span className="contact__chat-tooltip">{copy.chatLabel}</span>
+            </a>
 
             <div className="contact__content">
                 <h2>{copy.title}</h2>
@@ -70,18 +84,21 @@ export default function Contact({ lang = "en" }) {
                             {copy.services[0].title}
                         </h3>
                         <p>{copy.services[0].description}</p>
+                        <a className="button-chat" href={whatsappUrl} target="_blank" rel="noopener noreferrer">{copy.cta}</a>
                     </div>
                     <div className="service">
                         <h3>
                             {copy.services[1].title}
                         </h3>
                         <p>{copy.services[1].description}</p>
+                        <a className="button-chat" href={whatsappUrl} target="_blank" rel="noopener noreferrer">{copy.cta}</a>
                     </div>
                     <div className="service">
                         <h3>
                             {copy.services[2].title}
                         </h3>
                         <p>{copy.services[2].description}</p>
+                        <a className="button-chat" href={whatsappUrl} target="_blank" rel="noopener noreferrer">{copy.cta}</a>
                     </div>
                 </div>
             </div>

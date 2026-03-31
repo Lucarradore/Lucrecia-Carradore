@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar/Navbar";
 import About from "./components/About/About";
 import Expertise from "./components/Expertise/Expertise";
 import Projects from "./components/Projects/Projects";
+import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
 import GreenHome from "./components/Pages/GreenHome";
 import Hotel from "./components/Pages/Hotel";
@@ -35,6 +36,7 @@ function ScrollReveal() {
       ".projects__content",
       ".home-card",
       ".about__info",
+      ".contact__content",
       ".service",
       ".footer__content",
       ".project-page__topbar",
@@ -94,6 +96,7 @@ function HomePage({ lang, onToggleLang }) {
       <Expertise lang={lang} />
       <Projects lang={lang} />
       <About lang={lang} />
+      <Contact lang={lang} />
       <Footer lang={lang} />
     </main>
   );

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Lottie from "lottie-react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFacebookMessenger, faLinkedin, faInstagram, faGithub } from "@fortawesome/free-brands-svg-icons";
 
 import scrollHintVideo from "/video/videohero.mp4";
 
@@ -18,6 +19,12 @@ const copyByLang = {
 		scrollAria: "Desplazarse suavemente a la sección Experiencia",
 		scrollTitle: "Ir a Experiencia",
 	},
+};
+
+const socialLinks = {
+	messenger: "https://wa.me/3825448804",
+	linkedin: "https://www.linkedin.com/in/lucrecia-carradore-4b053022b/",
+	github: "https://github.com/Lucarradore",
 };
 
 
@@ -69,8 +76,18 @@ export default function Hero({ lang = "en" }) {
 					   muted
 					   playsInline
 				   />
-			   </div>
-
+			   </div>		   <div className="social-hero">
+			   <a href={socialLinks.messenger} target="_blank" rel="noopener noreferrer" aria-label="Messenger">
+				   <FontAwesomeIcon icon={faFacebookMessenger} />
+			   </a>
+			   <a href={socialLinks.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+				   <FontAwesomeIcon icon={faLinkedin} />
+			   </a>
+			   <FontAwesomeIcon icon={faInstagram} />
+			   <a href={socialLinks.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+				   <FontAwesomeIcon icon={faGithub} />
+			   </a>
+		   </div>
 			   <div className="hero__content">
 				   <h1>LUCRECIA CARRADORE</h1>
 				   <p>{copy.subtitle}</p>
