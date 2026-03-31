@@ -26,10 +26,20 @@ const copyByLang = {
         htmlLang: "en",
         helpText: "How can I help you?",
         htmlCode: {
+            doctypeLabel: "!DOCTYPE",
+            htmlLabel: "html",
+            langLabel: "lang",
+            headLabel: "head",
+            titleLabel: "title",
+            bodyLabel: "body",
+            h1Label: "h1",
+            pLabel: "p",
+            spanLabel: "span",
             titleText: "Full Stack Developer",
             paragraphLine1: "This is a dummy text with",
             spanText: "some span",
             paragraphLine2: "Oops, I almost forgot to say Hello World!",
+            ariaLabel: "Simulated HTML code",
         },
     },
     es: {
@@ -54,10 +64,20 @@ const copyByLang = {
         htmlLang: "es",
         helpText: "¿Cómo puedo ayudarte?",
         htmlCode: {
+            doctypeLabel: "!TIPO-DOCUMENTO",
+            htmlLabel: "html",
+            langLabel: "idioma",
+            headLabel: "encabezado",
+            titleLabel: "título",
+            bodyLabel: "cuerpo",
+            h1Label: "h1",
+            pLabel: "párrafo",
+            spanLabel: "span",
             titleText: "Desarrolladora Full Stack",
             paragraphLine1: "Este es un texto de ejemplo con",
             spanText: "un span",
             paragraphLine2: "Ups, casi me olvido de decir ¡Hola Mundo!",
+            ariaLabel: "Código HTML simulado",
         },
     },
 };
@@ -115,32 +135,32 @@ export default function Expertise({ lang = "en" }) {
             </div>
 
             <div className="html-code-wrap">
-           <div class="html-code" aria-label="Código HTML simulado">
-                <span class="line"><span class="sym">&lt;</span><span class="name">!DOCTYPE</span><span class="green"> html</span><span class="sym">&gt;</span></span>
+           <div className="html-code" aria-label={copy.htmlCode.ariaLabel}>
+                <span className="line"><span className="sym">&lt;</span><span className="name">{copy.htmlCode.doctypeLabel}</span><span className="green"> {copy.htmlCode.htmlLabel}</span><span className="sym">&gt;</span></span>
 
-                <span class="line"><span class="sym">&lt;</span><span class="name">html</span><span class="green"> lang</span><span class="white">=</span><span class="yellow">{`"${copy.htmlLang}"`}</span><span class="sym">&gt;</span></span>
+                <span className="line"><span className="sym">&lt;</span><span className="name">{copy.htmlCode.htmlLabel}</span><span className="green"> {copy.htmlCode.langLabel}</span><span className="white">=</span><span className="yellow">{`"${copy.htmlLang}"`}</span><span className="sym">&gt;</span></span>
 
-                <span class="line i1"><span class="sym">&lt;</span><span class="name">head</span><span class="sym">&gt;</span></span>
-                <span class="line i2"><span class="sym">&lt;</span><span class="name">title</span><span class="sym">&gt;</span></span>
-                <span class="line i3 text">{copy.htmlCode.titleText}</span>
-                <span class="line i2"><span class="sym">&lt;</span><span class="slash">/</span><span class="name">title</span><span class="sym">&gt;</span></span>
-                <span class="line i1"><span class="sym">&lt;</span><span class="slash">/</span><span class="name">head</span><span class="sym">&gt;</span></span>
+                <span className="line i1"><span className="sym">&lt;</span><span className="name">{copy.htmlCode.headLabel}</span><span className="sym">&gt;</span></span>
+                <span className="line i2"><span className="sym">&lt;</span><span className="name">{copy.htmlCode.titleLabel}</span><span className="sym">&gt;</span></span>
+                <span className="line i3 text">{copy.htmlCode.titleText}</span>
+                <span className="line i2"><span className="sym">&lt;</span><span className="slash">/</span><span className="name">{copy.htmlCode.titleLabel}</span><span className="sym">&gt;</span></span>
+                <span className="line i1"><span className="sym">&lt;</span><span className="slash">/</span><span className="name">{copy.htmlCode.headLabel}</span><span className="sym">&gt;</span></span>
 
-                <span class="line i1"><span class="sym">&lt;</span><span class="name">body</span><span class="sym">&gt;</span></span>
-                <span class="line i2"><span class="sym">&lt;</span><span class="name">h1</span><span class="sym">&gt;</span></span>
-                    <span class="line i3 text">{copy.helpText}</span>
-                <span class="line i2"><span class="sym">&lt;</span><span class="slash">/</span><span class="name">h1</span><span class="sym">&gt;</span></span>
+                <span className="line i1"><span className="sym">&lt;</span><span className="name">{copy.htmlCode.bodyLabel}</span><span className="sym">&gt;</span></span>
+                <span className="line i2"><span className="sym">&lt;</span><span className="name">{copy.htmlCode.h1Label}</span><span className="sym">&gt;</span></span>
+                    <span className="line i3 text">{copy.helpText}</span>
+                <span className="line i2"><span className="sym">&lt;</span><span className="slash">/</span><span className="name">{copy.htmlCode.h1Label}</span><span className="sym">&gt;</span></span>
 
-                <span class="line i2"><span class="sym">&lt;</span><span class="name">p</span><span class="sym">&gt;</span></span>
-                <span class="line i3 text">{copy.htmlCode.paragraphLine1}</span>
-                <span class="line i3"><span class="sym">&lt;</span><span class="name">span</span><span class="sym">&gt;</span></span>
-                <span class="line i3 text">{copy.htmlCode.spanText}</span>
-                <span class="line i3"><span class="sym">&lt;</span><span class="slash">/</span><span class="name">span</span><span class="sym">&gt;</span></span>
-                <span class="line i3 text">{copy.htmlCode.paragraphLine2}</span>
-                <span class="line i2"><span class="sym">&lt;</span><span class="slash">/</span><span class="name">p</span><span class="sym">&gt;</span></span>
-                <span class="line i1"><span class="sym">&lt;</span><span class="slash">/</span><span class="name">body</span><span class="sym">&gt;</span></span>
+                <span className="line i2"><span className="sym">&lt;</span><span className="name">{copy.htmlCode.pLabel}</span><span className="sym">&gt;</span></span>
+                <span className="line i3 text">{copy.htmlCode.paragraphLine1}</span>
+                <span className="line i3"><span className="sym">&lt;</span><span className="name">{copy.htmlCode.spanLabel}</span><span className="sym">&gt;</span></span>
+                <span className="line i3 text">{copy.htmlCode.spanText}</span>
+                <span className="line i3"><span className="sym">&lt;</span><span className="slash">/</span><span className="name">{copy.htmlCode.spanLabel}</span><span className="sym">&gt;</span></span>
+                <span className="line i3 text">{copy.htmlCode.paragraphLine2}</span>
+                <span className="line i2"><span className="sym">&lt;</span><span className="slash">/</span><span className="name">{copy.htmlCode.pLabel}</span><span className="sym">&gt;</span></span>
+                <span className="line i1"><span className="sym">&lt;</span><span className="slash">/</span><span className="name">{copy.htmlCode.bodyLabel}</span><span className="sym">&gt;</span></span>
 
-                <span class="line"><span class="sym">&lt;</span><span class="slash">/</span><span class="name">html</span><span class="sym">&gt;</span></span>
+                <span className="line"><span className="sym">&lt;</span><span className="slash">/</span><span className="name">{copy.htmlCode.htmlLabel}</span><span className="sym">&gt;</span></span>
 </div>
 </div>
 
