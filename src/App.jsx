@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import Hero from "./components/Hero/Hero";
 import Navbar from "./components/Navbar/Navbar";
 import About from "./components/About/About";
@@ -12,6 +12,16 @@ import Hotel from "./components/Pages/Hotel";
 import Noir from "./components/Pages/Noir";
 import Restaura from "./components/Pages/Restaura";
 import ProjectPage from "./components/Projects/ProjectPage";
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+  }, [pathname]);
+
+  return null;
+}
 
 function HomePage({ lang, onToggleLang }) {
   return (
@@ -36,6 +46,7 @@ function App() {
 
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<HomePage lang={lang} onToggleLang={handleToggleLang} />} />
         <Route path="/projects/greenhome" element={<GreenHome lang={lang} onToggleLang={handleToggleLang} />} />
