@@ -28,8 +28,8 @@ const portfolioProjects = [
   },
   {
     slug: "hotel",
-    title: "Famous Hotel",
-    titleEs: "Famous Hotel",
+    title: "La Sierra Hotel Resort",
+    titleEs: "La Sierra Hotel Resort",
     description: "Website made with HTML and CSS",
     descriptionEs: "Sitio web hecho con HTML y CSS",
     image: "/images/Hotel/Hotel-Famous.png",
