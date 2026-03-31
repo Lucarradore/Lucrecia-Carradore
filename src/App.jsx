@@ -23,6 +23,71 @@ function ScrollToTop() {
   return null;
 }
 
+function ScrollReveal() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    const selectors = [
+      ".hero__content",
+      ".social-hero",
+      ".expertise > h2",
+      ".expertise__content",
+      ".html-code-wrap",
+      ".projects__content",
+      ".home-card",
+      ".about__info",
+      ".contact__content",
+      ".service",
+      ".footer__content",
+      ".project-page__topbar",
+      ".project-page__content > h2",
+      ".project-page__content > p",
+      ".project-page__content > h3",
+      ".project-page__images",
+      ".card-galery h4",
+      ".galery",
+    ];
+
+    const elements = [...new Set(selectors.flatMap((selector) => Array.from(document.querySelectorAll(selector))))];
+
+    elements.forEach((element, index) => {
+      element.classList.add("reveal-on-scroll");
+      element.classList.remove("is-visible");
+      element.style.setProperty("--reveal-delay", `${Math.min(index % 6, 5) * 60}ms`);
+    });
+
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    if (prefersReducedMotion) {
+      elements.forEach((element) => element.classList.add("is-visible"));
+      return undefined;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+        rootMargin: "0px 0px -8% 0px",
+      },
+    );
+
+    elements.forEach((element) => observer.observe(element));
+
+    return () => {
+      observer.disconnect();
+    };
+  }, [pathname]);
+
+  return null;
+}
+
 function HomePage({ lang, onToggleLang }) {
   return (
     <main className="app">
@@ -47,6 +112,7 @@ function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
+      <ScrollReveal />
       <Routes>
         <Route path="/" element={<HomePage lang={lang} onToggleLang={handleToggleLang} />} />
         <Route path="/projects/greenhome" element={<GreenHome lang={lang} onToggleLang={handleToggleLang} />} />
